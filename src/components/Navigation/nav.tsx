@@ -1,5 +1,6 @@
 // NavBar.tsx
 import React from 'react';
+import styles from './nav.module.css'
 
 // Define types for navigation items
 interface NavItem {
@@ -17,11 +18,11 @@ const NavBar: React.FC = () => {
   ];
 
   return (
-    <nav className="navbar">
-      <div className="logo">
+    <nav className={styles.navbar}>
+      <div className={styles.logo}>
         <a href="/">MyLogo</a>
       </div>
-      <ul className="nav-links">
+      <ul className={styles.navlinks}>
         {navItems.map((item, index) => (
           <li key={index}>
             <a href={item.link}>{item.name}</a>
